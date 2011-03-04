@@ -1,4 +1,4 @@
-jansson (2.0-0) UNRELEASED; urgency=low
+jansson (2.0-0ppa1~lucid) lucid; urgency=low
 
   * New upstream release 2.0
   * Use source format 3.0 (quilt)
