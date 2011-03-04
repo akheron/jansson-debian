@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	autoreconf --force --install
+	dh_auto_configure
+
+override_dh_compress:
+	dh_compress -Xhtml/

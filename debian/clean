@@ -1,0 +1,14 @@
+Makefile.in
+aclocal.m4
+config.*
+configure
+depcomp
+install-sh
+ltmain.sh
+missing
+doc/Makefile.in
+src/Makefile.in
+test/Makefile.in
+test/bin/Makefile.in
+test/suites/Makefile.in
+test/suites/api/Makefile.in

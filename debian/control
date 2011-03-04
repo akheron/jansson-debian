@@ -1,0 +1,49 @@
+Source: jansson
+Section: devel
+Priority: optional
+Maintainer: Petri Lehtinen <petri@digip.org>
+Build-Depends: debhelper (>= 7.0.50), autoconf (>= 2.60), automake, libtool
+Standards-Version: 3.9.1
+Homepage: http://www.digip.org/jansson/
+Vcs-Browser: http://github.com/akheron/jansson-debian
+Vcs-Git: git://github.com/akheron/jansson-debian.git
+
+Package: libjansson4
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C library for working with JSON data
+ Jansson is a C library for encoding, decoding and manipulating JSON
+ data. It features simple and intuitive API and data model,
+ comprehensive documentation, no dependencies on other libraries, full
+ unicode support (UTF-8) and an extensive test suite.
+ .
+ This package contains the shared library.
+
+Package: libjansson-dev
+Section: libdevel
+Suggests: libjansson-doc
+Replaces: libjansson0-dev
+Breaks: libjansson0-dev (<< 2.0)
+Architecture: any
+Depends: ${misc:Depends}, libjansson4 (= ${binary:Version}), libc6-dev | libc-dev
+Description: C library for working with JSON data - development files
+ Jansson is a C library for encoding, decoding and manipulating JSON
+ data. It features simple and intuitive API and data model,
+ comprehensive documentation, no dependencies on other libraries, full
+ unicode support (UTF-8) and an extensive test suite.
+ .
+ This package contains the files needed to develop software that will
+ use Jansson.
+
+Package: libjansson-doc
+Section: doc
+Architecture: all
+Suggests: libjansson0 (= ${binary:Version})
+Depends: ${misc:Depends}, libjs-jquery
+Description: C library for working with JSON data - documentation
+ Jansson is a C library for encoding, decoding and manipulating JSON
+ data. It features simple and intuitive API and data model,
+ comprehensive documentation, no dependencies on other libraries, full
+ unicode support (UTF-8) and an extensive test suite.
+ .
+ This package contains documentation for Jansson.
